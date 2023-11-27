@@ -1,0 +1,238 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    margin-top: 200px;
+    width: 600px;
+    background: #fff;
+    padding-bottom: 30px;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 9px;
+    width: 100%;
+    margin-top: 30px;
+}
+
+.text {
+    color: #1B2735;
+    font-size: 48px;
+    font-weight: 700;
+}
+
+.underline {
+    width: 61px;
+    height: 6px;
+    background: #1B2735;
+    border-radius: 9px;
+}
+
+.inputs {
+    margin-top: 0px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.input {
+    display: flex;
+    align-items: center;
+    margin: auto;
+    width: 480px;
+    height: 80px;
+    background: #eaeaea;
+    border-radius: 6px;
+}
+
+.input img {
+    margin: 0px 30px;
+}
+
+.input input {
+    height: 50px;
+    width: 400px;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #797979;
+    font-size: 19px;
+}
+
+.forgot-password {
+    padding-left: 62px;
+    margin-top: 27px;
+    color: #797979;
+    font-size: 18px;
+}
+
+.forgot-password span {
+    color: #12141d;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.submit-container {
+    display: flex;
+    gap: 30px;
+    margin: 60px auto;
+}
+
+.submit {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 220px;
+    height: 59px;
+    color: #fff;
+    background: #1B2735;
+    border-radius: 50px;
+    font-size: 19px;
+    font-weight: 700;
+    cursor: pointer;
+
+    /* Propiedades de animación del botón */
+    width: 165px;
+    height: 62px;
+    cursor: pointer;
+    font-size: 17px;
+    border-radius: 1rem;
+    border: none;
+    position: relative;
+    background: #1B2735;
+    transition: 0.1s;
+}
+
+.submit::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(circle farthest-corner at 10% 20%, rgba(0, 25, 81, 1) 17.8%, rgba(12, 33, 101, 1) 100.2%);
+    filter: blur(15px);
+    z-index: -1;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.submit:active {
+    transform: scale(0.9) rotate(3deg);
+    background-image: radial-gradient(circle farthest-corner at 10% 20%, rgba(0, 25, 81, 1) 17.8%, rgba(12, 33, 101, 1) 100.2%);
+    transition: 0.5s;
+}
+
+
+.gray {
+    background: #eaeaea;
+    color: #676767;
+}
+
+.input select {
+    height: 50px;
+    width: 140px;
+    background: #fff; 
+    border: none;
+    outline: none;
+    color: #797979;
+    font-size: 19px;
+    padding: 10px;
+    margin-right: 70px; 
+}
+
+.input select option {
+    background: #fff; 
+    color: #797979;
+    font-size: 19px;
+}
+
+.input select:focus,
+.input select:active {
+    background: #1B2735; 
+    color: #fff; 
+    border: 2px solid #fff;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
+}
+
+.error-message {
+    color: #797979;
+    font-size: 18px;
+    text-align: center;
+}
+
+.button-container {
+    display: flex;
+    gap: 30px;
+    margin: 60px auto;
+}
+
+.button-container .submit {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 220px;
+    height: 59px;
+    color: #fff;
+    background: #1B2735;
+    border-radius: 50px;
+    font-size: 19px;
+    font-weight: 700;
+    cursor: pointer;
+
+    /* Propiedades de animación del botón */
+    width: 165px;
+    height: 62px;
+    cursor: pointer;
+    font-size: 17px;
+    border-radius: 1rem;
+    border: none;
+    position: relative;
+    background: #1B2735;
+    transition: 0.1s;
+}
+
+.button-container .submit::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(circle farthest-corner at 10% 20%, rgba(0, 25, 81, 1) 17.8%, rgba(12, 33, 101, 1) 100.2%);
+    filter: blur(15px);
+    z-index: -1;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.button-container .submit:active {
+    transform: scale(0.9) rotate(3deg);
+    background-image: radial-gradient(circle farthest-corner at 10% 20%, rgba(0, 25, 81, 1) 17.8%, rgba(12, 33, 101, 1) 100.2%);
+    transition: 0.5s;
+}
+
+body {
+    margin: 0;
+    overflow: auto; /*Scroll por la pagina*/
+    background: radial-gradient(ellipse at bottom, #1B2735 0%, #12141d 100%);
+  }
+  
+  .stars {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    background: #fff;
+    box-shadow: 100px 200px 10px #fff; /* Estilo de la estrella */
+    animation: twinkle 3s infinite;
+  }
+  
+  @keyframes twinkle {
+    0% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
