@@ -2,8 +2,8 @@
     display: flex;
     flex-direction: column;
     margin: auto;
-    margin-top: 200px;
-    width: 600px;
+    margin-top: 100px;
+    max-width: 600px;
     background: #fff;
     padding-bottom: 30px;
 }
@@ -12,14 +12,14 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 9px;
+    gap: 15px;
     width: 100%;
     margin-top: 30px;
 }
 
 .text {
     color: #1B2735;
-    font-size: 48px;
+    font-size: 40px;
     font-weight: 700;
 }
 
@@ -28,6 +28,19 @@
     height: 6px;
     background: #1B2735;
     border-radius: 9px;
+    margin-top: 5px;
+    margin-bottom: 20px;
+}
+
+.toggle-action {
+    margin-top: 20px;
+    cursor: pointer;
+    text-decoration: none;
+    position: relative;
+}
+
+.toggle-action:hover {
+    text-decoration: underline #1B2735;
 }
 
 .inputs {
@@ -45,6 +58,7 @@
     height: 80px;
     background: #eaeaea;
     border-radius: 6px;
+    margin-bottom: 15px;
 }
 
 .input img {
@@ -81,9 +95,6 @@
 }
 
 .submit {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     width: 220px;
     height: 59px;
     color: #fff;
@@ -92,6 +103,9 @@
     font-size: 19px;
     font-weight: 700;
     cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: 0.1s;
 
     /* Propiedades de animación del botón */
     width: 165px;
@@ -131,7 +145,7 @@
 
 .input select {
     height: 50px;
-    width: 140px;
+    width: 100%;
     background: #fff; 
     border: none;
     outline: none;
