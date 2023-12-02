@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { useHistory } from 'react-router-dom';
 import './Registro.css';
 
 import email_icon from '../Assets/email.png';
@@ -7,6 +8,8 @@ import password_icon from '../Assets/password.png';
 import user_icon from '../Assets/user.png';
 
 const Registro = ({ http }) => {
+  const history = useHistory();
+
   const [usuario, setUsuario] = useState({
     name: '',
     surname: '',
@@ -63,6 +66,11 @@ const Registro = ({ http }) => {
       const endpoint = isRegistro ? '/register' : '/login';
       const response = await http.post(endpoint, usuario);
       console.log('response =', response);
+
+      // Redirigir al home luego de iniciar sesion
+      if (!isRegistro) {
+        history.push('/home');
+      }
     } catch (error) {
       console.error('Error al enviar los datos:', error);
     }
