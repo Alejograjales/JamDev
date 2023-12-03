@@ -31,6 +31,7 @@ function Navbar() {
           <a onClick={handleClick} href="#h">Tienda</a>
           <a onClick={handleClick} href="#h">Categorias</a>
           <a onClick={handleClick} href="#h">Contacto</a>
+          <a onClick={handleClick} href="#h">Administracion</a>
         </div>
         <div className='menu'>
           <MenuButton clicked={clicked} handleClick={handleClick} />
