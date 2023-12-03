@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { useHistory } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import './Registro.css';
 
 import email_icon from '../Assets/email.png';
@@ -8,7 +8,7 @@ import password_icon from '../Assets/password.png';
 import user_icon from '../Assets/user.png';
 
 const Registro = ({ http }) => {
-  const history = useHistory();
+  const navigate = useNavigate();
 
   const [usuario, setUsuario] = useState({
     name: '',
@@ -69,7 +69,7 @@ const Registro = ({ http }) => {
 
       // Redirigir al home luego de iniciar sesion
       if (!isRegistro) {
-        history.push('/home');
+        navigate.push('/home');
       }
     } catch (error) {
       console.error('Error al enviar los datos:', error);

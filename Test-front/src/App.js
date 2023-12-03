@@ -1,8 +1,8 @@
-import Home from 'Components/Home/Home';
 import { useEffect } from 'react';
-import { Route, BrowserRouter as Router, Switch } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 import './App.css';
 import API from './Components/API';
+import Navbar from './Components/Navbar/Navbar';
 import Registro from './Components/Registro/Registro';
 
 function App() {
@@ -20,14 +20,11 @@ function App() {
 
   return (
     <div className="App">
-      <Router>
-        <Switch>
-          <Route path="/registro" Component={Registro} />
-          <Route path="/home" component={Home} />
-          <Route path="/" component={Home} /> 
-      <Registro http={http} />
-        </Switch>
-      </Router>
+      <Routes>
+          <Route path="/registro" element={<Registro http={http} />} > </Route>
+          <Route path="/home" element={<Navbar />} > </Route>
+          <Route path="/" element={<Navbar />} > </Route>
+      </Routes>
     </div>
   );
 }
